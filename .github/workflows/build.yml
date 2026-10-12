@@ -14,9 +14,9 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Revisar archivos del proyecto
+      - name: Revisar archivos
         run: |
-          echo "Archivos encontrados:"
-          find . -maxdepth 3 -type f | sort
+          echo "Archivos del proyecto:"
+          find . -maxdepth 4 -type f
           echo "Revisión terminada."
           
