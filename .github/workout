@@ -1,0 +1,22 @@
+
+name: Compilar APK Cactus McCoy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - principal
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Revisar archivos del proyecto
+        run: |
+          echo "Archivos encontrados:"
+          find . -maxdepth 3 -type f | sort
+          echo "Revisión terminada."
+          
