@@ -1,0 +1,19 @@
+COMPILAR CACTUS MCCOY APK DESDE GITHUB (SIN INSTALAR ANDROID STUDIO)
+
+IMPORTANTE:
+Este ZIP contiene el proyecto y una tarea automática de compilación. No contiene todavía una APK compilada. La compilación necesita internet para descargar Ruffle y las herramientas Android.
+
+Pasos:
+1. Entra en https://github.com/ y crea una cuenta o inicia sesión.
+2. Crea un repositorio nuevo, por ejemplo: cactus-mccoy-android.
+3. Sube todos los archivos y carpetas de este ZIP al repositorio, incluida la carpeta oculta .github/workflows/build-apk.yml.
+4. En el repositorio, abre la pestaña "Actions".
+5. Selecciona "Build Cactus McCoy APK" y pulsa "Run workflow".
+6. Espera a que termine el trabajo con estado verde.
+7. Abre la ejecución terminada, baja hasta "Artifacts" y descarga "cactus-mccoy-apk".
+8. Descomprime el archivo descargado y encontrarás app-debug.apk. Pásalo a tu Android e instálalo. Si Android lo pide, permite instalar apps desde esa fuente.
+
+La APK de depuración no está firmada para publicación en Play Store. Es para instalar y probar directamente.
+
+NOTA:
+Que compile no garantiza que cada juego funcione perfectamente en Ruffle: depende de la compatibilidad del emulador con los archivos SWF. El objetivo del proyecto es cargar los dos juegos desde archivos locales sin internet una vez instalada la app.

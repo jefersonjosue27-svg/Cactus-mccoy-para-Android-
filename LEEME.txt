@@ -1,0 +1,31 @@
+CACTUS McCOY 1 + 2 — PROYECTO ANDROID OFFLINE
+
+Estado: proyecto preparado; NO es un APK compilado todavía.
+Incluye los archivos SWF de ambos juegos, el menú y los scripts de integración.
+Ruffle y las dependencias se descargan durante la primera compilación.
+
+REQUISITOS
+- Ordenador con Node.js/npm
+- Android Studio con Android SDK instalado
+- Internet durante la primera compilación
+
+COMPILAR EN WINDOWS
+1. Descomprime este ZIP.
+2. Abre la carpeta del proyecto en una terminal (PowerShell o CMD).
+3. Ejecuta: npm install
+4. Ejecuta: npx cap add android
+   (si la carpeta android ya existe, omite este paso)
+5. Ejecuta: npm run build:apk
+   Si ese comando no está disponible, ejecuta: bash scripts/build-apk.sh desde Git Bash.
+
+COMPILAR EN LINUX/macOS
+Desde la carpeta del proyecto ejecuta: bash scripts/build-apk.sh
+
+El script instala dependencias, copia los archivos web de Ruffle, prepara Android y ejecuta Gradle.
+Al terminar, el APK de depuración debería estar en:
+android/app/build/outputs/apk/debug/app-debug.apk
+
+IMPORTANTE
+- Esta carpeta no contiene todavía ruffle.js/ruffle.wasm ni un APK final.
+- La compilación no se pudo ejecutar aquí: el entorno no tiene Android SDK/Gradle y npm install agotó el tiempo de espera.
+- No instales un archivo APK hasta comprobar que procede de una fuente de confianza.
